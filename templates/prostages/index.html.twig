@@ -6,12 +6,12 @@
 <h1> Bienvenue sur prostages ! </h1>
 
 <p>
-Cette page présente tous les stages/entreprises/formations disponibles sur le site de l'UPPA.
+Listes des stages proposés :
 </p>
 
 <ul>
     {% for stage in listeStages%}
-    <a href="{{path( 'prostages_stages', {'id':stage.id} )}}">{{stage.titre}}</a>
+    <br><a href="{{path( 'prostages_stages', {'id':stage.id} )}}">{{stage.titre}}</a><br>
     {% endfor %}
 </ul>
 

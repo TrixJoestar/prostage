@@ -5,14 +5,14 @@
 {% block contenu %}
 
 
-<br>Nom : {{uneEntreprise.nom}}<br>
-{{uneEntreprise.adresse}}<br>
-{{uneEntreprise.activite}}<br>
-{{uneEntreprise.siteWeb}}<br>
+<br><br><br><b>Nom :</b> {{uneEntreprise.nom}}<br>
+<b>Adresse : </b>{{uneEntreprise.adresse}}<br>
+<b>Activité : </b>{{uneEntreprise.activite}}<br>
+<b>Site Web : </b>{{uneEntreprise.siteWeb}}<br>
 
 {% for stage in uneEntreprise.stages %}
-
-{{stage.titre}}
+<br>
+<b>Titre du stage recherché : </b>{{stage.titre}}
 
 {% endfor %}
 

@@ -5,12 +5,12 @@
 {% block contenu %}
 
 
-<br>Nom : {{uneFormation.nomCourt}}<br>
+<br><br><br><b>Nom :</b> {{uneFormation.nomCourt}}<br>
 {{uneFormation.nomLong}}<br>
-
+<br>
 {% for stage in uneFormation.stages %}
 
-{{stage.titre}}
+<b>Recherché :</b> {{stage.titre}}
 
 {% endfor %}
 
