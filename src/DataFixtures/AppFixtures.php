@@ -19,22 +19,24 @@ class AppFixtures extends Fixture
         $faker = \Faker\Factory::create();
         $formations = array();
         $entreprises = array();
-        $nomFormationCourt = array("DUT", "BUT", "LP", "BTS");
-        $nomFormationLong = array("Diplome Universitaire de Technologie", "Bachelor Universitaire de Technologie", "Licence Professionnelle", "Brevet Technologique Superieur");
+        $nomFormationCourt = array("D.U.T", "B.U.T", "LP", "B.T.S");
+        $nomFormationLong = array("Diplome Universitaire de Technologie", "Bachelor Universitaire de Technologie",
+        "Licence Professionnelle", "Brevet Technologique Supérieur");
+        
         for($i = 0; $i < 4; $i++)
         {
-        $uneFormation = new Formation();
-        $uneFormation->setNomCourt($nomFormationCourt[$i]);
-        $uneFormation->setNomLong($nomFormationLong[$i]);
-        $manager->persist($uneFormation);
+            $uneFormation = new Formation();
+            $uneFormation->setNomCourt($nomFormationCourt[$i]);
+            $uneFormation->setNomLong($nomFormationLong[$i]);
+            $manager->persist($uneFormation);
         
-        $formations[$i] = $uneFormation;
+            $formations[$i] = $uneFormation;
         }
         
         // ENTREPRISES
 
-        $nomEntreprise = array("Google", "Ubisoft", "Amazon", "Microsoft");
-        $activiteEntreprise = array("Developpement Web", "Developpement de jeu", "Developement de jeu", "Developpement de Web");
+        $nomEntreprise = array("Google", "Ubisoft", "Microsoft", "Amazon");
+        $activiteEntreprise = array("Développement Web", "Développement de jeu", "Dévelopement de jeu", "Développement de Web");
         $siteWebEntreprise = array("google.fr", "ubisoft.fr", "microsoft.fr", "amazon.fr");
 
         for($i = 0; $i < 4; $i++)
@@ -45,14 +47,15 @@ class AppFixtures extends Fixture
             $uneEntreprise->setActivite($activiteEntreprise[$i]);
             $uneEntreprise->setSiteWeb($siteWebEntreprise[$i]);
             $manager->persist($uneEntreprise);
+
             $entreprises[$i] = $uneEntreprise;
 
         }
 
         // STAGES
 
-        $titreStage = array("Developpeur Web", "Developpeur Java", "Developpeur C++", "Developpeur Python");
-        $missionStage = array("Creer un nouveau site web pour Westeros.", "Creer une application mobile en Java dans le theme des mangas.",
+        $titreStage = array("Développeur Web", "Développeur Java", "Développeur C++", "Développeur Python");
+        $missionStage = array("Créer un nouveau site web pour Westeros.", "Créer une application mobile en Java dans le theme des mangas.",
         "Faire une copie de Minecraft en C++", "Faire une copie du snake sur mobile");
         $emailStage = array("google@gmail.com", "ubisoftofficiel@gmail.com", "microsoftofficiel@gmail.com", "amazonofficiel@gmail.com");
 

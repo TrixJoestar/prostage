@@ -1,12 +1,17 @@
 {% extends 'base.html.twig' %}
 
-
 {% block contenu %}
-<br>
-{% for formation in listeFormations %}
+    <center>
 
-    <br><br><a href="{{path( 'prostages_formation', {'id':formation.id} )}}">{{formation.nomCourt}}</a>
 
-{% endfor %}
+    <br><br><br><b>Liste des formations :</b>
 
+
+    {% for formation in listeFormations %}
+
+        <br><br><a href="{{path( 'prostages_formation', {'id':formation.id} )}}">{{formation.nomCourt}}</a>
+
+    {% endfor %}
+
+    </center>
 {% endblock %}

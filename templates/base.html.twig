@@ -2,29 +2,35 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Bienvenue !{% endblock %}</title>
+        <title>{% block title %}Prostages{% endblock %}</title>
         {# Run `composer require symfony/webpack-encore-bundle`
            and uncomment the following Encore helpers to start using Symfony UX #}
-        {% block stylesheets %}
-            {#{{ encore_entry_link_tags('app') }}#}
-        {% endblock %}
-
     </head>
+
     <body>
         {% block slider %}
-        <h1>------- SLIDER --------</h1>
-        <a href="{{path('prostages')}}">Accueil</a>
+
+            <h1> <center>Prostages !</center></h1>
+        
         {% endblock %}
 
         {% block menu %}
-        <h1>------- MENU --------</h1>
-        <a href="{{path('prostages_entreprises')}}">Trier par entreprise</a>
-        <p>OU</p>
-        <a href="{{path('prostages_formations')}}">Trier par formation</a>
+            <center>
+
+            <h1>---------------------------------</h1>
+            <a href="{{path('prostages')}}"><b>Accueil</b></a>
+            <br><br><br>
+            <a href="{{path('prostages_entreprises')}}">Trier par entreprise</a>
+            <p><center>OU</center></p>
+            <a href="{{path('prostages_formations')}}">Trier par formation</a>
+
+            </center>
         {% endblock %}
 
         {% block contenu %}
-        <h1>------- CONTENU --------</h1>
+
+            <h1><center>---------------------------------</center></h1>
+
         {% endblock %}
 
     </body>

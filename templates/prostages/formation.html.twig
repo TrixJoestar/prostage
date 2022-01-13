@@ -1,17 +1,19 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello ProStagesController!{% endblock %}
-
 {% block contenu %}
+    <center>
 
 
-<br><br><br><b>Nom :</b> {{uneFormation.nomCourt}}<br>
-{{uneFormation.nomLong}}<br>
-<br>
-{% for stage in uneFormation.stages %}
+    <br><br><br><b>Nom :</b> {{uneFormation.nomCourt}}
+    <p>({{uneFormation.nomLong}})</p><br><br>
 
-<b>Recherché :</b> {{stage.titre}}
 
-{% endfor %}
+    {% for stage in uneFormation.stages %}
 
+        <b>Recherché :</b> {{stage.titre}}
+
+    {% endfor %}
+
+
+    </center>
 {% endblock %}

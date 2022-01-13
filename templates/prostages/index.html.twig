@@ -1,21 +1,19 @@
 {% extends 'base.html.twig' %}
 
-
 {% block contenu %}
+    <center>
 
-<h1> Bienvenue sur prostages ! </h1>
 
-<p>
-Listes des stages proposés :
-</p>
+    <p><br><br><b>Listes des stages proposés :</b></p>
 
-<ul>
+
     {% for stage in listeStages%}
-    <br><a href="{{path( 'prostages_stages', {'id':stage.id} )}}">{{stage.titre}}</a><br>
+
+        <br><a href="{{path( 'prostages_stages', {'id':stage.id} )}}">{{stage.titre}}</a><br>
+
     {% endfor %}
-</ul>
 
 
-
+    </center>
 {% endblock %}
 

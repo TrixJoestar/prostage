@@ -1,11 +1,17 @@
 {% extends 'base.html.twig' %}
 
-
 {% block contenu %}
-<br>
-<br><br><b>Liste des entreprises proposant un stage :</b>
-{% for entreprise in listeEntreprises%}
-    <br><br><a href="{{path( 'prostages_entreprise', {'id':entreprise.id} )}}">{{entreprise.nom}}</a>
+    <center>
+
+
+    <br><br><br><b>Liste des entreprises proposant un stage :</b>
+
+    {% for entreprise in listeEntreprises%}
+
+        <br><br><a href="{{path( 'prostages_entreprise', {'id':entreprise.id} )}}">{{entreprise.nom}}</a>
+
     {% endfor %}
 
+
+    </center>
 {% endblock %}
