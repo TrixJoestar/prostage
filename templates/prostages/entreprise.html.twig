@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ProStagesController!{% endblock %}
+
+{% block contenu %}
+
+
+<br>Nom : {{uneEntreprise.nom}}<br>
+{{uneEntreprise.adresse}}<br>
+{{uneEntreprise.activite}}<br>
+{{uneEntreprise.siteWeb}}<br>
+
+{% for stage in uneEntreprise.stages %}
+
+{{stage.titre}}
+
+{% endfor %}
+
+{% endblock %}

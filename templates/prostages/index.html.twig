@@ -10,25 +10,9 @@ Cette page présente tous les stages/entreprises/formations disponibles sur le s
 </p>
 
 <ul>
-    <li>
-        <a href="{{path('prostages_entreprises', {id:1})}}">Entreprises N°1</a>
-    </li>
-
-    <li>
-        <a href="{{path('prostages_entreprises', {id:2})}}">Entreprises N°2</a>
-    </li>
-
-    <li>
-        <a href="{{path('prostages_entreprises', {id:3})}}">Entreprises N°3</a>
-    </li>
-
-    <li>
-        <a href="{{path('prostages_entreprises', {id:4})}}">Entreprises N°4</a>
-    </li>
-
-    <li>
-        <a href="{{path('prostages_entreprises', {id:5})}}">Entreprises N°5</a>
-    </li>
+    {% for stage in listeStages%}
+    <a href="{{path( 'prostages_stages', {'id':stage.id} )}}">{{stage.titre}}</a>
+    {% endfor %}
 </ul>
 
 

@@ -3,10 +3,8 @@
 
 {% block contenu %}
 
-<h1> Ressource {{idRessource}} </h1>
-
-<p>
-Cette page affichera le descriptif de la ressource pédagogique n°{{idRessource}}
-</p>
+{% for entreprise in listeEntreprises%}
+    <br><a href="{{path( 'prostages_entreprise', {'id':entreprise.id} )}}">{{entreprise.nom}}</a>
+    {% endfor %}
 
 {% endblock %}

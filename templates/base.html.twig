@@ -13,10 +13,13 @@
     <body>
         {% block slider %}
         <h1>------- SLIDER --------</h1>
+        <a href="{{path('prostages')}}">Accueil</a>
         {% endblock %}
 
         {% block menu %}
         <h1>------- MENU --------</h1>
+        <a href="{{path('prostages_entreprises')}}">Trier par entreprise</a>
+        <a href="{{path('prostages_formations')}}">Trier par formation</a>
         {% endblock %}
 
         {% block contenu %}
